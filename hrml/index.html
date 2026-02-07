@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola Mundo Dinámico</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animaciones de Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .card {
+            border-radius: 20px;
+        }
+        h1 {
+            font-size: 3.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="card shadow-lg p-5 bg-dark text-white animate__animated animate__fadeInDown">
+            <h1 class="fw-bold animate__animated animate__pulse animate__infinite">¡Hola Mundo!</h1>
+            <p class="lead mt-3">Pages DevOps</p>
+            <button class="btn btn-warning btn-lg mt-4 animate__animated animate__bounce" onclick="cambiarColor()">
+                Cambiar color de fondo
+            </button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function cambiarColor() {
+            const colores = [
+                "linear-gradient(135deg, #007bff, #6610f2)",
+                "linear-gradient(135deg, #28a745, #20c997)",
+                "linear-gradient(135deg, #ff9a9e, #fad0c4)",
+                "linear-gradient(135deg, #ff416c, #ff4b2b)"
+            ];
+            document.body.style.background = colores[Math.floor(Math.random() * colores.length)];
+        }
+    </script>
+</body>
+</html>
